@@ -9,16 +9,23 @@ void swap(int *a, int *b)
     *b = temp;
 }
 
+void printArray(int arr[], int n)
+{
+    for(int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
+
 long bubbleSortOptimized(int arr[], int n)
 {
     long comparisons = 0;
-    int i, j, swapped;
+    int swapped;
 
-    for(i = 0; i < n - 1; i++)
+    for(int i = 0; i < n - 1; i++)
     {
         swapped = 0;
 
-        for(j = 0; j < n - i - 1; j++)
+        for(int j = 0; j < n - i - 1; j++)
         {
             comparisons++;
 
@@ -39,11 +46,10 @@ long bubbleSortOptimized(int arr[], int n)
 long bubbleSortNormal(int arr[], int n)
 {
     long comparisons = 0;
-    int i, j;
 
-    for(i = 0; i < n - 1; i++)
+    for(int i = 0; i < n - 1; i++)
     {
-        for(j = 0; j < n - i - 1; j++)
+        for(int j = 0; j < n - i - 1; j++)
         {
             comparisons++;
 
@@ -86,7 +92,13 @@ int main()
     long c1 = bubbleSortOptimized(arr1, n);
     long c2 = bubbleSortNormal(arr2, n);
 
-    printf("\n\nOptimized Bubble Sort Comparisons = %ld", c1);
+    printf("\n\nSorted Array (Optimized):\n");
+    printArray(arr1, n);
+
+    printf("\nSorted Array (Normal):\n");
+    printArray(arr2, n);
+
+    printf("\nOptimized Bubble Sort Comparisons = %ld", c1);
     printf("\nNormal Bubble Sort Comparisons = %ld\n", c2);
 
     return 0;
