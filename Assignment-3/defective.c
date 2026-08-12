@@ -28,7 +28,7 @@ int findDefective(int coins[], int l, int r, int normalWeight) {
 }
 
 int main() {
-    int coins[] = {10, 10, 9, 10, 10}; // defective at index 2
+    int coins[] = {10, 10,10, 9, 10, 10}; // defective at index 2
     int n = sizeof(coins)/sizeof(coins[0]);
     int normalWeight = 10; // expected weight of normal coin
 
