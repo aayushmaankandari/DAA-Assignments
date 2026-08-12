@@ -6,7 +6,7 @@ int main() {
 
 printf("n,O(1),O(log n),O(n)\n");
 
-for(n = 1; n <= 10; n += 5)
+for(n = 1; n <= 100; n += 5)
 {
     printf("%d,1,%.2f,%d\n", n, log2(n), n);
 }
