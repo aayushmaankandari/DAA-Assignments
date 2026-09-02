@@ -15,7 +15,7 @@ int kSum(int arr[], int n, int k, int target, int index) {
 }
 
 int main() {
-    int arr[] = {2, 4, 6, 8, 10};
+    int arr[] = {5,7,};
     int n = sizeof(arr) / sizeof(arr[0]);
     int k = 3;        // subset size
     int target = 18;  // target sum
